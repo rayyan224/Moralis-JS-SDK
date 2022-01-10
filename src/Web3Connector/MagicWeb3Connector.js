@@ -38,7 +38,7 @@ class WalletConnectWeb3Connector extends AbstractWeb3Connector {
 
     this.subscribeToEvents(this.provider);
 
-    return { provider: this.provider, account, chainId: verifiedChainId };
+    return { provider: this.provider, account:this.account, chainId: verifiedChainId };
 }
     async deactivate() {
         this.unsubscribeToEvents(this.provider);
